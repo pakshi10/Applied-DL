@@ -2,7 +2,7 @@ FROM pytorch/pytorch:latest
 
 RUN pip install --upgrade pip
 
-RUN pip install numpy pandas opencv-python
+RUN pip install numpy pandas opencv-python matplotlib
 
 # Set the default working directory
 WORKDIR /app

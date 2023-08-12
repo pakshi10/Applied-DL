@@ -134,5 +134,19 @@ class BasicsOperation:
         tensor = torch.tensor(tensor,dtype=dtype,device=device,requires_grad=requires_grad,pin_memory=pin_memory,non_blocking=non_blocking,copy=copy,memory_format=memory_format,grad=grad)
         print("Tensor from another tensor with new dtype and device and requires_grad and pin_memory and non_blocking and copy and memory_format and grad: ",tensor)
         return tensor   
+    def create_tensor_from_another_tensor_with_new_dtype_and_device_and_requires_grad_and_pin_memory_and_non_blocking_and_copy_and_memory_format_and_grad_fn(tensor,dtype,device,requires_grad,pin_memory,non_blocking,copy,memory_format,grad,grad_fn):         
+        tensor = torch.tensor(tensor,dtype=dtype,device=device,requires_grad=requires_grad,pin_memory=pin_memory,non_blocking=non_blocking,copy=copy,memory_format=memory_format,grad=grad,grad_fn=grad_fn)
+        print("Tensor from another tensor with new dtype and device and requires_grad and pin_memory and non_blocking and copy and memory_format and grad and grad_fn: ",tensor)
+        return tensor
+    def create_tensor_from_another_tensor_with_new_dtype_and_device_and_requires_grad_and_pin_memory_and_non_blocking_and_copy_and_memory_format_and_grad_fn_and_is_leaf(tensor,dtype,device,requires_grad,pin_memory,non_blocking,copy,memory_format,grad,grad_fn,is_leaf):
+        tensor = torch.tensor(tensor,dtype=dtype,device=device,requires_grad=requires_grad,pin_memory=pin_memory,non_blocking=non_blocking,copy=copy,memory_format=memory_format,grad=grad,grad_fn=grad_fn,is_leaf=is_leaf)
+        print("Tensor from another tensor with new dtype and device and requires_grad and pin_memory and non_blocking and copy and memory_format and grad and grad_fn and is_leaf: ",tensor)
+        return tensor
+    def create_tensor_from_another_tensor_with_new_dtype_and_device_and_requires_grad_and_pin_memory_and_non_blocking_and_copy_and_memory_format_and_grad_fn_and_is_leaf_and_kwargs(tensor,dtype,device,requires_grad,pin_memory,non_blocking,copy,memory_format,grad,grad_fn,is_leaf,**kwargs):
+        tensor = torch.tensor(tensor,dtype=dtype,device=device,requires_grad=requires_grad,pin_memory=pin_memory,non_blocking=non_blocking,copy=copy,memory_format=memory_format,grad=grad,grad_fn=grad_fn,is_leaf=is_leaf,**kwargs)
+        print("Tensor from another tensor with new dtype and device and requires_grad and pin_memory and non_blocking and copy and memory_format and grad and grad_fn and is_leaf and kwargs: ",tensor)
+        return tensor
+    
+
     
     

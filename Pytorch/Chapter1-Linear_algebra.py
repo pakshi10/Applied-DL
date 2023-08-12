@@ -8,13 +8,9 @@ class LinearAlgebra():
         print("tensor1 + tensor2 = ", tensor1 + tensor2)    
         print("tensor1 * tensor2 = ", tensor1 * tensor2)
         print("tensor1 / tensor2 = ", tensor1 / tensor2)
-        print("tensor1 ** tensor2 = ", tensor1 ** tensor2)
+        print("tensor1 ** tensor2 = ", tensor1 ** tensor2) #meanig of ** is power is 2 eg 2**2 = 4
     def tensor_operation(self,tensor1,tensor2):
         print("Tensor operation")
-        print("tensor1 + tensor2 = ", tensor1 + tensor2)
-        print("tensor1 * tensor2 = ", tensor1 * tensor2)    
-        print("tensor1 / tensor2 = ", tensor1 / tensor2)
-        print("tensor1 ** tensor2 = ", tensor1 ** tensor2)
         print("tensor1 @ tensor2 = ", tensor1 @ tensor2)
         print("tensor1 sum = ", tensor1.sum())
         print("tensor1 shape = ", tensor1.shape)
