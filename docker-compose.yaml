@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
   deep-learning-course:
     build:
@@ -8,4 +8,10 @@ services:
       - 8080:8080
     volumes:
       - ./:/app  # Replace with the actual path on your host machine
-
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: [gpu]
+ 

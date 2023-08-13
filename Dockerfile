@@ -3,6 +3,9 @@ FROM pytorch/pytorch:latest
 RUN pip install --upgrade pip
 
 RUN pip install numpy pandas opencv-python matplotlib
+RUN pip install ultralytics
+#dependencies for opencv and yolov8
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 # Set the default working directory
 WORKDIR /app

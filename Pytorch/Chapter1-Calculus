@@ -1,0 +1,32 @@
+#Generate graph and tangent of y=2x-3
+import torch
+import matplotlib.pyplot as plt
+import numpy as np
+from torch.autograd import Variable
+
+def generate_graph(x,y,tangent):
+    # x is a tensor of shape (n,1) and y is a string of function
+    x = Variable(x, requires_grad=True)
+    #Variable is used to track computation
+    y = eval(y)
+    y.backward(tangent)
+    plt.plot(x.detach().numpy(), y.detach().numpy(), label='function')
+    plt.plot(x.detach().numpy(), x.grad.numpy(), label='tangent')
+    plt.legend()
+    plt.savefig('graph.png')
+    return y
+if __name__ == "__main__":
+    x = torch.arange(-3, 3, 0.1)
+    y = "2*x**2-3*x"
+    tangent = 4*x-3
+    y = generate_graph(x,y,tangent)
+    
+    #print(y)
+    #print(x.grad)
+    #print(x.grad_fn)
+    #print(x.grad_fn.next_functions[0][0])
+    #print(x.grad_fn.next_functions[0][0].next_functions[0][0])
+    #print(x.grad_fn.next_functions[0][0].next_functions[0][0].next_functions[0][0])
+    #print(x.grad_fn.next_functions[0][0].next_functions[0][0].next_functions[0][0].next_functions[0][0])
+    #print(x.grad_fn.next_functions[0][0].next_functions[0][0].next_functions[0][0].next_functions[0][0].next_functions[0][0])
+
