@@ -8,6 +8,8 @@ RUN pip install ultralytics
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 #sklearn
 RUN pip install scikit-learn
+#torchmetrics
+RUN pip install torchmetrics mlxtend
 # Set the default working directory
 WORKDIR /app
 
